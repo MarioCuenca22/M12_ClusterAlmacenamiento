@@ -37,4 +37,4 @@ Todos los temas disponibles se ubican en la carpeta themes, donde tenemos cierto
 - [Dracula](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/onedark.json)
 - [Dark Grey](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/dark-grey.json)
 
-![App Screenshot](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/Recursos/Pestaña1.jpg)
+![App Screenshot](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/Recursos/Pesta%C3%B1a1.png)
