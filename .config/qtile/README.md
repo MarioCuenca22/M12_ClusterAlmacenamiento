@@ -20,3 +20,21 @@ Para poder disfrutar completamente esta experiencia es recomendable tener instal
 | `MOD + S`    | `Scrot`    | Abrimos el gestor de capturas de pantalla scrot.        |
 
 
+
+## Temas y colores
+
+Todos los temas disponibles se ubican en la carpeta themes, donde tenemos ciertos archivos .json con listas de colores que un python comprueba, lease:
+
+#### Lista con temas incluídos
+
+- [Rosepine](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/rosepine.json)
+- [One Dark](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/onedark.json)
+- [Nord](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/nord.json)
+- [Nord Wave](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/nord-wave.json)
+- [Monokai Pro](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/monokai-pro.json)
+- [Material Ocean](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/material-ocean.json)
+- [Material Darker](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/material-darker.json)
+- [Dracula](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/onedark.json)
+- [Dark Grey](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/dark-grey.json)
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
