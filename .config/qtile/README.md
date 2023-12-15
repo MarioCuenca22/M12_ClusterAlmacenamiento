@@ -1,6 +1,6 @@
-# M12 - QTILE
+# M12 - Proyecto de Síntesis
 ## Keybinds QTILE
-#### Instalaciones y atajos
+### Instalaciones y atajos
 
 Para poder usar cómodamente este gestor de ventanas llamado QTILE hemos creado un sistema própio de atajos de teclado para poder hacer uso de este.
 

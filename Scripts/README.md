@@ -3,7 +3,13 @@
 
 ## Scripts
 
+> [!IMPORTANT]  
+> Importante tener instalado `pip` y `python3`
+
 Nuestro servidor dispone de varias funcionalidades que hemos programado desde 0 para poder disfrutar más la experiencia de este. La primera y la más destacable de ellas es el [bot de Telegram](https://docs.google.com) al que se puede acceder mediante la propia APP o vía WEB.
+
+> [!NOTE]  
+> `pip install -r requisitos.txr` es necesario para el uso.                                                       
 
 ## BOT Telegram
 

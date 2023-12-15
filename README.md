@@ -3,6 +3,7 @@ En este repositorio de GitHub encontrarás todos los archivos que han sido usado
 
 ## Arch Linux
 Para usasr este servidor y mantener todos los archivos hemos usado el Sistema Operativo Arch Linux, este si bien es cierto que necesita mucha experiencia en terminales Linux GNU / Debian nos ofrece de igual Manera mucha versatilidad a la hora de configuración.
+
 ### Instalación Arch
 
 Para la instalación de este sistema operativo hemos usado la siguiente [lista de comandos comandos](https://docs.google.com/document/d/1PCI3X_GeILUVKZWFjRZFN7CHKRcyyJ6n-PJcGTt3bFo/edit?usp=sharing), o lease la [documentación general](https://docs.google.com) de la página XX a XX.
