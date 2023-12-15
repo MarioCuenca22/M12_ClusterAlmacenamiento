@@ -30,16 +30,10 @@ temas = {
 selección = input("Selecciona el tema deseado (1-10): ")
 
 if selección in temas:
-    print(f"El tema seleccionado es: {Fore.YELLOW}{temas[selección]['nombre']}{Fore.WHITE} con ID: {Fore.YELLOW}{temas[selección]['id']}{Fore.WHITE}")
+    print(f"El tema seleccionado es: {Fore.YELLOW}{temas[selección]['nombre']}{Fore.WHITE}")
 else:
     print("Número de tema no válido")
 
 
 seguro = input(f"Tu tema escogido ha sido {Fore.YELLOW}{selección}{Fore.WHITE} estás seguro? (y/n) ")
 
-if seguro.lower == "y" or "yes":
-    print("Reiniciando sistema y aplicando cambios...")
-elif seguro.lower == "n" or "no":
-    print("Saliendo...")
-else:
-    print("Comando no reconocido, saliendo...")
