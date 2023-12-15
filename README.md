@@ -1,4 +1,3 @@
-
 # M12 - Proyecto de Síntesis
 
 En este repositorio de GitHub encontrarás todos los archivos que han sido usados para este proyecto, desde los archivos de configuración hasta los comandos usados para la configuración de todo tipo de aplicaciones, incluído el SO.
@@ -18,7 +17,7 @@ Apache es una gran herramienta la que nos permite poder acceder a nuestras aplic
 
 ### Qtile
 
-Para este sistema operativo ARCH hemos hecho uso del gestor de ventanas Qtile, vease la[configuración](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile)
+Para este sistema operativo ARCH hemos hecho uso del gestor de ventanas Qtile, vease la [configuración](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile)
 
 
 
