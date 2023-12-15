@@ -12,7 +12,7 @@ Apache es una gran herramienta la que nos permite poder acceder a nuestras aplic
 
 ## Qtile
 
-Para este sistema operativo ARCH hemos hecho uso del gestor de ventanas Qtile, vease la[configuración](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/rosepine.json)
+Para este sistema operativo ARCH hemos hecho uso del gestor de ventanas Qtile, vease la [configuración](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/themes/rosepine.json)
 
 
 
