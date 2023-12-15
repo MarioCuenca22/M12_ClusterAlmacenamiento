@@ -1,0 +1,7 @@
+time
+os
+random
+colorama
+telebot
+subprocess
+threading

@@ -1,15 +1,19 @@
 
 # M12 - Proyecto de Síntesis
-
 ## Scripts
-
-> [!IMPORTANT]  
-> Importante tener instalado `pip` y `python3`
+#### Instalar pip y python3
+```bash
+sudo pacman -S python
+sudo pacman -S python-pip
+```
 
 Nuestro servidor dispone de varias funcionalidades que hemos programado desde 0 para poder disfrutar más la experiencia de este. La primera y la más destacable de ellas es el [bot de Telegram](https://docs.google.com) al que se puede acceder mediante la propia APP o vía WEB.
 
-> [!NOTE]  
-> `pip install -r requisitos.txr` es necesario para el uso.                                                       
+> [!IMPORTANT]  
+> Tener instalado `pip` y `python3`.
+
+> [!WARNING]  
+> Usa `./instalar_requisitos.sh` para instalar los requisitos.
 
 ## BOT Telegram
 
@@ -23,8 +27,3 @@ Este bot ha sido diseñado para poder "controlar" la terminal del servidor a dis
 | `/benchmark`|`Sistema`|Realiza un benchmark a la CPU.|
 | `/ping`|`Redes`|Realiza un ping a google y muestra los ms.|
 | `/reboot` | `Sistema`  |Reinicia el sistema por completo al instante.|
-
-
-
-
-
