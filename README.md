@@ -1,4 +1,3 @@
-
 # M12 - Proyecto de Síntesis
 
 En este repositorio de GitHub encontrarás todos los archivos que han sido usados para este proyecto, desde los archivos de configuración hasta los comandos usados para la configuración de todo tipo de aplicaciones, incluído el SO.
