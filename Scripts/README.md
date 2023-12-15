@@ -1,8 +1,6 @@
 
 # M12 - Proyecto de Síntesis
 
-En este repositorio de GitHub encontrarás todos los archivos que han sido usados para este proyecto, desde los archivos de configuración hasta los comandos usados para la configuración de todo tipo de aplicaciones, incluído el SO.
-
 ## Scripts
 
 Nuestro servidor dispone de varias funcionalidades que hemos programado desde 0 para poder disfrutar más la experiencia de este. La primera y la más destacable de ellas es el [bot de Telegram](https://docs.google.com) al que se puede acceder mediante la propia APP o vía WEB.
