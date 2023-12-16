@@ -6,9 +6,10 @@ import json
 
 from .path import qtile_path
 
+with open('actual.sh', 'r') as archivo:
+        theme = archivo.read()
 
 def load_theme():
-    theme = "dark-grey"
 
     config = path.join(qtile_path, "config.json")
     if path.isfile(config):

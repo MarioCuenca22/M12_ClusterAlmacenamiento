@@ -5,3 +5,5 @@ colorama
 telebot
 subprocess
 threading
+psutil
+lobqtile

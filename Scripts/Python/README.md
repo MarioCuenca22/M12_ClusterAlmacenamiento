@@ -1,7 +1,8 @@
 
 # M12 - Proyecto de Síntesis
-## Scripts
+## Python
 #### Instalar pip y python3
+
 ```bash
 sudo pacman -S python
 sudo pacman -S python-pip
@@ -16,7 +17,6 @@ Nuestro servidor dispone de varias funcionalidades que hemos programado desde 0 
 > Usa `./instalar_requisitos.sh` para instalar los requisitos.
 
 ## BOT Telegram
-
 Este bot ha sido diseñado para poder "controlar" la terminal del servidor a distancia desde la propia APP. De esta manera podemos realizar diversas acciones.
 
 | Comando         | Tipo        |    Descripción |

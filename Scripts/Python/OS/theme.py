@@ -34,6 +34,9 @@ if selección in temas:
 else:
     print("Número de tema no válido")
 
-
 seguro = input(f"Tu tema escogido ha sido {Fore.YELLOW}{selección}{Fore.WHITE} estás seguro? (y/n) ")
 
+ruta_config_qtile = os.path.expanduser("~/.config/qtile/settings/actual.sh")
+
+with open(ruta_config_qtile, 'w') as archivo:
+    archivo.write('Nuevo contenido para Qtile\n')

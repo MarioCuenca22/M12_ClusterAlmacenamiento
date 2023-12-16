@@ -1,5 +1,4 @@
 # Archivo principal de configuración sobre Qtile
-
 from libqtile import hook
 
 from settings.keys import mod, keys
