@@ -1,76 +1,82 @@
 import telebot
-import subprocess
 import time
-import threading
+import ping3
+import os
+from datetime import datetime
+import pytz
 
-TOKEN = "6572086972:AAFFAgetUyFYTIgjlPWQwv89qFjkY6iJBAs"
-CHAT_ID = " 6111310001"
+bot = telebot.TeleBot("6572086972:AAFFAgetUyFYTIgjlPWQwv89qFjkY6iJBAs")
+pinger = ping3.ping
 
-bot = telebot.TeleBot(TOKEN)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PINGS
 
-def obtener_datos(ruta_archivo):
-    with open(ruta_archivo, 'r') as archivo:
-        datos = archivo.readline().strip()
-        return datos
+@bot.message_handler(commands=['ping'])
+def start(message):
+    respuesta = pinger('google.es')
 
-def obtener_temperatura():
-    comando = "vcgencmd measure_temp"
-    proceso = subprocess.Popen(comando, shell=True, stdout=subprocess.PIPE)
-    salida = proceso.communicate()[0].decode()
-
-    temperatura = float(salida.split('=')[1].split('\'')[0])
-    temperatura_truncada = '{:.1f}'.format(temperatura)
-    return float(temperatura_truncada)
- 
-def apagado(password):
-    comando = "sudo -S shutdown now"
-    proceso = subprocess.Popen(comando, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    salida, error = proceso.communicate(input=(password + '\n').encode())
-    if error:
-        print("Ocurrió un error:", error.decode())
-
-ruta_archivo = '/etc/fonts/fonts.txt'
-password = obtener_datos(ruta_archivo)
-
-def benchmark_potente(message):
-    bot.send_message(message.chat.id, "Realizando benchmark potente...")
-
-    comando_benchmark = "sudo stress-ng --cpu 4 --timeout 60s"
-    proceso_benchmark = subprocess.Popen(comando_benchmark, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    salida_benchmark, error_benchmark = proceso_benchmark.communicate(input=(password + '\n').encode())
-
-    if error_benchmark:
-        bot.send_message(message.chat.id, f"Ocurrió un error al ejecutar el benchmark: {error_benchmark.decode()}")
+    if respuesta is not None:
+        latencia = round(respuesta * 1000, 2)
     else:
-        for _ in range(12):
-            temperatura = obtener_temperatura()
-            bot.send_message(message.chat.id, f"La temperatura del procesador es: {temperatura}°C")
-            time.sleep(5) 
+        latencia = "N/A"
 
-        bot.send_message(message.chat.id, "Benchmark potente completado.")
+    bot.send_message(message.chat.id, f"Pong 🏓 {latencia} ms!")
+
+    print(f"Latencia: {latencia} ms")
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HELP
+    
+@bot.message_handler(commands=['help'])
+def help(message):
+    mensaje = """
+Los comandos disponibles son:
+- /help: Muestra esta ayuda.
+- /ping: Realiza un ping para ver la latencia.
+- /temp: Muestra la temperatura actual de la CPU.
+- /apaga: Apaga el servidor, shutdown now.
+- /reboot: Reinicia el servidor, reboot now.
+
+"""
+    bot.send_message(message.chat.id, mensaje)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ APAGA
+    
+@bot.message_handler(commands=['apagar'])
+def apagar_servidor(message):
+    usuario = f"{message.from_user.username} ({message.from_user.id})"
+
+    bot.send_message(message.chat.id, "Apagando servidor...")
+    
 
 
-@bot.message_handler(commands=["temp"])
-def benchmark_potente(message):
-    temperatura = obtener_temperatura()
-    bot.send_message(message.chat.id, f"La temperatura del procesador es: {temperatura}°C") 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REBOOT
+    
+@bot.message_handler(commands=['reboot'])
+def help(message):
+    bot.send_message(message.chat.id, "Reiniciando servidor...")
+    print("Reiniciando servidor y guardando el log...")
+    madrid_tz = pytz.timezone('Europe/Madrid')
+    diahora = datetime.now(madrid_tz)
 
-@bot.message_handler(commands=["help"])
-def ayuda(message):
-    commandos = [
-        "/help - Imprime este mensaje.\n",
-        "/temp - Consulta la temperatura una vez.\n",
-        "/ping_t - Consulta la temperatura 10 veces.\n",
-        "/apaga - Apaga remotamente el servidor.\n",
-        "/benchp - Realiza un benchmark potente.\n",
-    ]
+    formato_deseado = '%d-%m-%Y %H:%M:%S'
+    fecha_formateada = diahora.strftime(formato_deseado)
 
-    lista_comandos = "".join(commandos)
-    texto_ayuda = (
-        "¡Hola! Aquí están los comandos disponibles:\n\n" + lista_comandos +
-        "\n\nPara obtener más detalles sobre un comando, simplemente escribe el comando (por ejemplo, /benchp)."
-    )
-    bot.reply_to(message, texto_ayuda)
+    directorio = os.path.dirname(os.path.realpath(__file__))
+    dirarchi = os.path.join(directorio, 'botlog.txt')
+    with open(dirarchi, 'a') as archivo1:  
 
+        if message.chat.id == 6111310001:
+            usuario = "Mario"
+        elif message.chat.id == "DanituID":
+            usuario = "Daniel"
+        else:
+            usuario = message.chat.id
+
+        logeo = (f"El usuario {usuario} ha reiniciado el servidor. {fecha_formateada}\n")
+        archivo1.write(str(logeo))
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REBOOT
+@bot.message_handler(func=lambda message: True)
+def handle_messages(message):
+    bot.send_message(message.chat.id, "Comando no reconocido. Escribe /help para ver la lista de comandos disponibles.")
 
 bot.polling()
