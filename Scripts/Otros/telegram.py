@@ -12,6 +12,26 @@ pinger = ping3.ping
 amarillo = Fore.YELLOW
 verde = Fore.GREEN
 rojo = Fore.RED
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START
+@bot.message_handler(commands=['help'])
+def help(message):
+    mensaje = """
+
+Bienvenido al bot de control de nuestro servidor!
+A continuación verás los comandos disponibles.
+
+Consultas:
+- /help: Muestra esta ayuda.
+- /ping: Realiza un ping para ver la latencia.
+- /sysinfo: Información del sistema, CPU y RAM.
+- /discos: Información de discos y particiones.
+
+Administración ⚠:
+- /apaga: Apaga el servidor, shutdown now.
+- /reboot: Reinicia el servidor, reboot now.
+
+"""
+    bot.send_message(message.chat.id, mensaje)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PINGS
 
 @bot.message_handler(commands=['ping'])
@@ -39,7 +59,7 @@ Consultas:
 - /sysinfo: Información del sistema, CPU y RAM.
 - /discos: Información de discos y particiones.
 
-Administración:
+Administración ⚠:
 - /apaga: Apaga el servidor, shutdown now.
 - /reboot: Reinicia el servidor, reboot now.
 
