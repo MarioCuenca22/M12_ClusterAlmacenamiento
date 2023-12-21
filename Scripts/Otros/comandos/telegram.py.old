@@ -103,8 +103,8 @@ def mostrar_informacion_sistema(message):
     def obtener_informacion_cpu():
         info_cpu = (
             f"Información de la CPU:\n"
-            f"Número de núcleos físicos: {psutil.cpu_count(logical=False)}\n"
-            f"Número de núcleos lógicos: {psutil.cpu_count(logical=True)}\n"
+            f"Número de núcleos físicos: N/A\n" # {psutil.cpu_count(logical=False)}
+            f"Número de núcleos lógicos: N/A\n" # {psutil.cpu_count(logical=True)}
             f"Porcentaje de uso de la CPU: {psutil.cpu_percent(interval=1)}%"
         )
         return info_cpu
