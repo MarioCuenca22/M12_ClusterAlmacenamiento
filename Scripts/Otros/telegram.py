@@ -5,10 +5,13 @@ import os
 from datetime import datetime
 import pytz
 import psutil
+from colorama import Fore
 
 bot = telebot.TeleBot("6572086972:AAFFAgetUyFYTIgjlPWQwv89qFjkY6iJBAs")
 pinger = ping3.ping
-
+amarillo = Fore.YELLOW
+verde = Fore.GREEN
+rojo = Fore.RED
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PINGS
 
 @bot.message_handler(commands=['ping'])
@@ -140,33 +143,43 @@ def mostrar_informacion_sistema(message):
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REBOOT
+ids_permitidas = [6111310001, "DanituID"]
+
 @bot.message_handler(commands=['reboot'])
 def help(message):
-    bot.send_message(message.chat.id, "Reiniciando servidor...")
-    print("Reiniciando servidor y guardando el log...")
     madrid_tz = pytz.timezone('Europe/Madrid')
     diahora = datetime.now(madrid_tz)
-
     formato_deseado = '%d-%m-%Y %H:%M:%S'
     fecha_formateada = diahora.strftime(formato_deseado)
 
     directorio = os.path.dirname(os.path.realpath(__file__))
     dirarchi = os.path.join(directorio, 'botlog.txt')
-    with open(dirarchi, 'a') as archivo1:  
 
-        if message.chat.id == 6111310001:
-            usuario = "Mario"
-        elif message.chat.id == "DanituID":
-            usuario = "Daniel"
-        else:
-            usuario = message.chat.id
+    if message.chat.id in ids_permitidas:
+        bot.send_message(message.chat.id, "Reiniciando servidor...")
+        print(f"{amarillo}AVISO:{Fore.RESET} Reiniciando servidor y guardando el log...")
 
-        logeo = (f"El usuario {usuario} ha reiniciado el servidor. {fecha_formateada}\n")
-        archivo1.write(str(logeo))
+        with open(dirarchi, 'a') as archivo1:
+            usuario = "Desconocido"
+            if message.chat.id == 6111310001:
+                usuario = "Mario"
+            elif message.chat.id == "DanituID":
+                usuario = "Daniel"
+
+            logeo = f"El usuario {usuario} ha reiniciado el servidor. {fecha_formateada}\n"
+            archivo1.write(str(logeo))
+            print("sudo reboot now") #Cambiar por un reboot now funcional.
+    else:
+        bot.send_message(message.chat.id, "No tienes los permisos para reiniciar el servidor.")
+        bot.send_message(message.chat.id, "Este problema será notificado a los administradores.")
+        print(f"{amarillo}AVISO:{Fore.RESET} El usuario {message.chat.id} no tiene permisos para reiniciar el servidor.")
+        with open(dirarchi, 'a') as archivo1:
+            logeo2 = f"El usuario {message.chat.id} ha intentado reiniciar el servidor sin permisos. {fecha_formateada}\n"
+            archivo1.write(str(logeo2))
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EXCLUSIONES
 @bot.message_handler(func=lambda message: True)
 def handle_messages(message):
-    bot.send_message(message.chat.id, "Comando no reconocido. Escribe /help para ver la lista de comandos disponibles.")
+    bot.send_message(message.chat.id, "Comando no reconocido 📍 Escribe /help para ver la lista de comandos disponibles.")
 
 bot.polling()
