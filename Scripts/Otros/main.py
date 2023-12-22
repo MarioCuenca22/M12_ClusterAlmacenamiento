@@ -2,7 +2,7 @@
 import telebot
 from comandos import ping, sysinfo, discos, admin
 
-bot = telebot.TeleBot("6572086972:AAFFAgetUyFYTIgjlPWQwv89qFjkY6iJBAs")
+bot = telebot.TeleBot("X")
 
 @bot.message_handler(commands=['help'])
 def help(message):
