@@ -26,7 +26,9 @@ Apache es una gran herramienta la que nos permite poder acceder a nuestras aplic
 Para este sistema operativo ARCH hemos hecho uso del gestor de ventanas Qtile, vease la [configuración](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile). Junto a diversos archivos de [Python](https://github.com/MarioCuenca22/dotfiles/blob/main/.config/qtile/settings) completamente personalizados y hechos a medida para este Sistema Operativo adaptandolo a nuestras necesidades hemos creado una versión altamente estable y accesible para este gestor de ventanas, junto a una gran cantidad de Temas disponibles para todos los gustos.
 
 ### Web Greeter / Light DM
-### Automatización
+
+## Automatización
+El servidor cuenta con grandes características de automatización, desde bots hasta la instalación de paquetes. Se ha hecho de esta manera para poder conseguir la mayor comodidad posible dentro de este entorno.
 
 ## Programación
-Toda la programación externa como pueda ser automatizaciones, bots u cualquier otro script de este repositorio a no ser que se especifique está diseñado desde cero para poder satisfacer por completo nuestras necesidades.
+Toda la programación externa, como puedan ser automatizaciones, bots u cualquier otro script de este repositorio, a no ser que se especifique, está diseñada desde cero para poder satisfacer por completo nuestras necesidades.
