@@ -19,14 +19,14 @@ Nuestro servidor dispone de varias funcionalidades que hemos programado desde 0 
 ## BOT Telegram
 Este bot ha sido diseñado para poder "controlar" la terminal del servidor a distancia desde la propia APP. De esta manera podemos realizar diversas acciones.
 
-| Comando         | Tipo        |    Descripción |
-| :----------- | :--------  | :-------------------------------------------------------|
-|`/apagar`|`Sistema` | Apaga el sistema con shutdown now.|
-| `/temperatura`|`Visual`| Muestra temperatura de la CPU.|
-| `/temps`| `Visual` |Temperatura de la CPU durante 60s.|
-| `/benchmark`|`Sistema`|Realiza un benchmark a la CPU.|
-| `/ping`|`Redes`|Realiza un ping a google y muestra los ms.|
-| `/reboot` | `Sistema`  |Reinicia el sistema por completo al instante.|
+| Comando           | Tipo       | Descripción                                            |
+| :---------------- | :--------- | :----------------------------------------------------- |
+| /help             | Sistema    | Muestra esta ayuda.                                    |
+| /ping             | Redes      | Realiza un ping para ver la latencia.                  |
+| /sysinfo          | Sistema    | Información del sistema, CPU y RAM.                    |
+| /discos           | Sistema    | Información de discos y particiones.                   |
+| /apagar           | Sistema    | Apaga el servidor, shutdown now.                       |
+| /reboot           | Sistema    | Reinicia el servidor, reboot now.                      |
 
 ## Theme Changer
 Hemos creado un sistema para poder cambiar el tema actual de Qtile sin tener que entrar en archivos de configuración externos para usuarios no tan avanzados, ejecutando el archivo [theme.py](https://github.com/MarioCuenca22/M12/blob/main/Scripts/OS/theme.py). Que debería ubicarse en el escritorio puedes modificarlo más fácilmente.
