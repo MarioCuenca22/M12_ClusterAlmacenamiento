@@ -1,4 +1,7 @@
 # M12 - Proyecto de Síntesis
+> [!WARNING]  
+> Este repositorio sigue en proceso de creación!
+
 En este repositorio de GitHub encontrarás todos los archivos que han sido usados para este proyecto, desde los archivos de configuración hasta los comandos usados para la configuración de todo tipo de aplicaciones, incluído el SO.
 
 ## Arch Linux
