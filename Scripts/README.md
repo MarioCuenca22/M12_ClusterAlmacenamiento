@@ -17,7 +17,7 @@ Nuestro servidor dispone de varias funcionalidades que hemos programado desde 0 
 > Usa `./instalar_requisitos.sh` para instalar los requisitos.
 
 ## BOT Telegram
-Este bot ha sido diseñado para poder "controlar" la terminal del servidor a distancia desde la propia APP. De esta manera podemos realizar diversas acciones.
+Este bot ha sido diseñado para poder "controlar" la terminal del servidor a distancia desde la propia APP o sitio Weeb de Telegram. De esta manera podemos realizar diversas acciones entre las que podemos encontrar:
 
 | Comando           | Tipo       | Descripción                                            |
 | :---------------- | :--------- | :----------------------------------------------------- |
@@ -27,6 +27,19 @@ Este bot ha sido diseñado para poder "controlar" la terminal del servidor a dis
 | /discos           | Sistema    | Información de discos y particiones.                   |
 | /apagar           | Sistema    | Apaga el servidor, shutdown now.                       |
 | /reboot           | Sistema    | Reinicia el servidor, reboot now.                      |
+
+El bot se ha creado de manera hyper-eficiente de manera que cuando se ejecuta en el servidor se abre un archivo de pocas líneas sin embargo cuando se hace uso de cualquier comando este archivo consulta a otros archivos que están separados en rama para acceder a los comandos, de esta manera cuando el bot esté en "standby" o en espera de comandos se ejecutarán pocas líneas y a consecuencia se consumirán pocos recursos.
+
+##### Estructura de archivos para comandos
+```Documentos/
+|-- comandos/
+|   |-- __init__.py
+|   |-- ping.py
+|   |-- sysinfo.py
+|   |-- discos.py
+|   |-- admin.py
+|-- main.py
+```
 
 ## Theme Changer
 Hemos creado un sistema para poder cambiar el tema actual de Qtile sin tener que entrar en archivos de configuración externos para usuarios no tan avanzados, ejecutando el archivo [theme.py](https://github.com/MarioCuenca22/M12/blob/main/Scripts/OS/theme.py). Que debería ubicarse en el escritorio puedes modificarlo más fácilmente.
