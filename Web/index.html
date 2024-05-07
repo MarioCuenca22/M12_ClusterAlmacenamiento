@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ESPETONETA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="/images/cluster.png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-FaTdGXXH9R/rmxoOVlhFk5f9BX2ZhDsZQzfwL7D2nhxLYF9sVLDMbKx4Lh5j5PFa" crossorigin="anonymous">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<i class="fa-solid fa-server fa-3x" style="margin-top: 20px;"></i>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>ESPETONETA</h1>
+								<p style="text-align: center;">Un sitio web para nuestro proyecto de Síntesis final llamado ESPETONETA para poder<br />
+								acceder con mayor facilidad a todo el contenido de nuestro servidor</p>
+								<button onclick="window.location.href='#contenido'" type="button" style="margin: 0 10px;">CONTENIDO</button>
+								<h4 style="padding-top: 10px;"><a href="#readme">README IMPORTANTE</a><h4>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#documentacion">Docs</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contacto">Contacto</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introducción -->
+							<article id="intro">
+								<h2 class="major">Introducción</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>Esta página web está diseñada específicamente para poder facilitar la accesibilidad de los recursos que yacen en este nuestro proyecto. Aquí podrás encontrar los siguientes apartados:.</p>
+								<ul>
+									<li><b><a href="#instalarch">Arch Linux</a></b></li>
+									<p>Tanto esta página web como este servidor están alojados en el sistema operativo llamado <b><a href="https://es.wikipedia.org/wiki/Arch_Linux">Arch Linux</a></b>, un sistema base que desde Kernel partimos hacia un diseño completamente personalizado y adaptado a nuestras necesidades, de esta manera podemos aprovechar al máximo el rendimiento de <a href=#servidor><b>nuestro servidor</b></a> gracias a instalar los paquetes únicamente necesarios para el funcionamiento de este.</p>
+									<li><b><a href="#raspberry">Raspberry Pi Zero / 4</a></b></li>
+									<p>En el hardware de este proyecto podremos observar que disponemos de diversas Raspberry Pi de diversos modelos, tanto como una <b><a href="https://www.raspberrypi.com/products/raspberry-pi-zero/">PI Zero</a></b> como una <b><a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/"> PI 4 Modelo B</a></b> que dispone de 8GB de memoria RAM, esta, la que será la Raspberry general que controla diversos módulos. En estas Raspberrys podemos apreciar que cada una dispone de una función diferente que se especifica de una manera mucho más concreta en la <a href="#documentacion">documentación.</a></p>
+									<li><b><a href="#apache">Dominios y Apache</a></b></li>
+									<p>Como se podrá observar a los contenidos de nuestro proyecto se puede acceder mediante el dominio <b><i>espetoneta.es</i></b> tanto esta web como otros componentes, (<i>véase <a href="#webmin">webmin</a></i>) lo podemos encontrar alojado en Apache3, un servicio gratuito ofrecido por la empresa <a href="https://es.wikipedia.org/wiki/Servidor_HTTP_Apache">Apache Software Foundation</a> mientras que el contenido está mantenido en el dominio alquilado por la empresa OVH con la extensión ".es". </p>
+									<li><b><a href="#botelegram">BOT Telegram</a></b></li>
+									<p>Nuestro proyecto consta como se ha mencionado anteriormente con diversas Raspberry Pi, en una de ellas alojaremos un <b><a href="https://es.wikipedia.org/wiki/Telegram_Bot_API">BOT de Telegram</a>,</b>  con este bot podremos tanto recibir como enviar datos <b>/</b> comandos <b>/</b> paquetes o incluso controlar directamente el servidor, usando el gestor de bots <a href="https://botostore.com/c/botfather/">BotFather</a> y el lenguaje de programación de <b><a href="https://www.python.org/download/releases/3.0/">Python 3.0.X.</a></b> La idea principal de poder hacer uso de este bot es de poder mantenernos informados desde cualquier parte con cualquier dispositivo que tenga acceso a internet y Telegram instalado. </p>
+									<li><b><a href="#grafana">Grafana</a></b></li>
+									<p>Grafana es un gestor de Dashborads o más concido como paneles en los que podemos poner todo tipo de información, desde gráficas del costo eléctrico hasta usos de CPU, RAM entre otros datos altamente interesantes y de utilidad que podremos recurrir para comprobar que todo en nuestro sistema funciona correctamente.</p>
+								</ul>
+							</article>
+
+						<!--Contenido -->
+						<article id="contenido">
+							<h2 class="major">Contenido</h2>
+							<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+							<p>Desde esta página se podrá acceder a todo el contenido creado para este proyecto.</p>
+							<p>Recuerda que siempre puedes <a href="#contacto">contactar</a> con los creadores de este para poder consultar cualquier duda o problema que tengas en el proceso de acceso a cualquier recurso de este.</p>
+							<div style="text-align: center;">
+								<a href="espetoneta.es:10000" class="button" style="-moz-appearance: none; -webkit-appearance: none; -ms-appearance: none; appearance: none; -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; background-color: transparent; border-radius: 4px; border: 0; box-shadow: inset 0 0 0 1px #ffffff; color: #ffffff !important; cursor: pointer; display: inline-block; font-size: 0.8rem; font-weight: 300; height: 2.75rem; letter-spacing: 0.2rem; line-height: 2.75rem; outline: 0; padding: 0 1.25rem 0 1.35rem; text-align: center; text-decoration: none; text-transform: uppercase; white-space: nowrap; margin-right: 10px;">WEBMIN</a>
+							    <a href=":10000" class="button" style="-moz-appearance: none; -webkit-appearance: none; -ms-appearance: none; appearance: none; -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; background-color: transparent; border-radius: 4px; border: 0; box-shadow: inset 0 0 0 1px #ffffff; color: #ffffff !important; cursor: pointer; display: inline-block; font-size: 0.8rem; font-weight: 300; height: 2.75rem; letter-spacing: 0.2rem; line-height: 2.75rem; outline: 0; padding: 0 1.25rem 0 1.35rem; text-align: center; text-decoration: none; text-transform: uppercase; white-space: nowrap; margin-right: 10px;">GRAFANA</a>
+								<a href=":10000" class="button" style="-moz-appearance: none; -webkit-appearance: none; -ms-appearance: none; appearance: none; -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; background-color: transparent; border-radius: 4px; border: 0; box-shadow: inset 0 0 0 1px #ffffff; color: #ffffff !important; cursor: pointer; display: inline-block; font-size: 0.8rem; font-weight: 300; height: 2.75rem; letter-spacing: 0.2rem; line-height: 2.75rem; outline: 0; padding: 0 1.25rem 0 1.35rem; text-align: center; text-decoration: none; text-transform: uppercase; white-space: nowrap; margin-right: 10px;">GALERÍA</a>
+								<a href=":10000" class="button" style="-moz-appearance: none; -webkit-appearance: none; -ms-appearance: none; appearance: none; -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; background-color: transparent; border-radius: 4px; border: 0; box-shadow: inset 0 0 0 1px #ffffff; color: #ffffff !important; cursor: pointer; display: inline-block; font-size: 0.8rem; font-weight: 300; height: 2.75rem; letter-spacing: 0.2rem; line-height: 2.75rem; outline: 0; padding: 0 1.25rem 0 1.35rem; text-align: center; text-decoration: none; text-transform: uppercase; white-space: nowrap; margin-right: 10px;">SSH</a>
+							</div>							  
+						</article>
+
+						<!-- Documentación -->
+							<article id="documentacion">
+								<h2 class="major">Documentación</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p>Toda la documentación la podemos encontrar en los siguentes enlaces sin embargo en este pequeño articulo vamos a hacer un resumen de una porción del contenido. Como se ha mencionado toda la documentación la podremos encontrar en esta carpeta de <b><a href="https://drive.google.com/drive/folders/1VpMJFruP2Sa-_qPQKCb51_ye-SE3iXei?usp=drive_link">Google Drive</a></b>, pero con los siguientes enlaces podremos acceder a una pequeña Introducción en la que podremos ver un poco de cada tema.</p>
+								<p>Aclarar que hay mucha configuración "oculta" en esta página por ende recomendamos encarecidamente leer bien cada articulo creado como se especifica en <a href="#readme">el readme importante</a> de todas maneras en este articulo se destacan diversos articulos escritos dentro de esta web donde se incluyen los más importantes. </p>
+								<ul>
+									<li><a href="#instalarch">Instalación ARCH</a> <b>(En dessarrollo)</b></li>
+									<li><a href="#botelegram">BOT Telegram</a></li>
+									<li><a href="#raspberry">Raspberry Pi 4 / Zero</a></li>
+									<li><a href="#apache">Apache y hosting</a></li>
+								</ul>
+							</article>
+
+						<!-- Nuestro Servidor -->
+							<article id="servidor">
+								<h2 class="major">Nuestro servidor</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<p>Queremos informarles que actualmente no contamos con un servidor para alojar el contenido que deseamos compartir con ustedes. Sin embargo, estamos trabajando diligentemente para adquirir uno lo antes posible.</p>
+								<p>Entendemos la importancia de contar con un servidor confiable que garantice el acceso continuo a la información que proporcionamos. Por ello, estamos explorando diversas opciones y evaluando las mejores soluciones disponibles en el mercado.</p>
+								<p>Tan pronto como tengamos un servidor en funcionamiento, actualizaremos este artículo para incluir toda la información relevante sobre su adquisición y las mejoras que esto implicará en nuestra plataforma. Estamos comprometidos a brindarles la mejor experiencia posible y agradecemos su paciencia y comprensión mientras trabajamos en esta tarea.</p>
+							
+							</article>
+
+						<!-- Grafana -->
+						<article id="grafana">
+							<h2 class="major">Grafana</h2>
+							<span class="image main"><img src="images/grafana/encabezado.jpg" alt="" /></span>
+							<p>Grafana es un gestor de dashborads en los que podemos añadir gran cantidad de estadisticas, gráficos y otro tipo de datos como los estados de nuestro sistema, posteriormente mediante el puerto :3000 en nuestra IP o dominio podemos acceder a este servicio. En este caso tenemos introducida una contraseña y usuarios para que no se pueda acceder sin registro previo pues es algo que puede ser un tanto delicado.</p>
+							<h3>Dashboards</h3>
+							<p>En nuestro caso usaremos un dashboard prediseñado para un uso similar al que vamos a destinar nuestros sistemas. En este caso es el Dashboard Online con la id <i>15661</i> una vez se ha instalado el Dashboard o enlazado en este caso, deberemos proporcionarle una base de datos o fuente de estos. Que en este caso es Prometheus 
+							<span class="image main"><img src="images/grafana/pic01.jpg" alt="" /></span>
+							<h3>Prometheus (BDD)</h3>
+							<p>Para instalar Prometheus es relativamente sencillo, podemos instalarlo directamente desde su página web y añadir el archivo tar.gz mediante WinSCP a una ruta confiable en nuestro sistema mediante SSH, por ende una vez que tenemos el arvhivo dentro del SO podemos proceder con la guia de instalación que encontraremos en la página web oficial.</p>
+						</article>
+ 
+						<!-- Instalación de Arch -->
+						<article id="instalarch">
+							<h2 class="major">Instalación de Arch</h2>
+							<span class="image main"><img src="images/instalarch/encabezado.jpg" alt="" /></span>
+							<p>Dani trabaja pesao</p>
+						</article>
+
+						<!-- Apache -->
+						<article id="apache">
+							<h2 class="major">Apache</h2>
+							<span class="image main"><img src="images/apache/encabezado.jpg" alt="" /></span>
+							<h3>Apache</h3>
+							<p>Apache, es el servidor HTTP de código abierto más utilizado en el mundo. Tras una pequeña configuración, hemos logrado integrar Apache en nuestro entorno de servidor, garantizando así un rendimiento óptimo y una estabilidad excepcional para nuestros servicios en línea. Como es muy conocido y sencilla tanto la instalación como el funcionamiento no indagaremos mucho sobre su uso en este entorno, sin embargo mencionar que se ha gestionado de tal manera que se ha configurado para poder navegar entre directorios y servicios de manera mucho más sencilla.</p>
+							<h3>Hosting</h3>
+							<p>Tanto la página web como el resto de servicios están accesibles mediante el dominio espetoneta.es como se podrá apreciar. Este dominio ha sido comprado y mantenido mediante el proveedor OVH, el funcionamiento es un tanto complejo sin embargo mostraré un pequeño resumen de como se ha realizado toda la configuración de red.</p>
+							<p>Desde el dashboard de OVH podemos cambiar la dirección IP a la que apunte la zona DNS de tipo A, esta es la encargada de redirigir a nuestro router.</p>
+							<span class="image main"><img src="images/apache/pic01.jpg" alt="" /></span>
+							<h3>Routers y DMZ</h3>
+							<p>Una vez tenemos configurada las zonas DNS de neustro dominio podemos pasar a la configuración del Router, a esta si estamos en la misma red del router podemos acceder mediante la IP 192.168.1.1 en el navegador, en este caso la configuración está hecha desde un router de la marca Orange.</p>
+							<p>Ya dentro de la configuración de nuestro router debemos cambiar la zona desmilitarizada o DMZ, añadiendo la IP de nuestro servidor, que en nuestro caso es una IP estática fija o estática que se ha establecido manualmente a la 192.168.1.10 para poder reconocerla fácilmente.</p>
+							<span class="image main"><img src="images/apache/pic02.jpg" alt="" /></span>
+							<p>Una vez tenemos las zonas desmilitarizadas y las IPs configuradas correctamente simplemente debemos configurar el router para que redirija ciertas peticiones a la IP solicitada que en este caso es el protocolo TCP con los puertos 443 tanto interno como externo que son las que usa el servicio HTTPS, de esta manera todas las peticiones externas que reciba de este tipo las va a redirijir a la IP indicada que en este caso es la de nuestro servidor. Este paso es opcional, pues nuestro servidor ya será accesible mediante la zona desmilitarizada sin embargo de esta manera podemos asegurarnos de que si se realiza otra petición esta será dirigida directamente a nuestro servidor.</p>
+							<span class="image main"><img src="images/apache/pic03.jpg" alt="" /></span>
+						</article>
+
+						<!-- Raspberry PI Zero / 4 -->
+						<article id="raspberry">
+							<h2 class="major">Raspberry Pi Zero / 4</h2>
+							<span class="image main"><img src="images/raspberry/encabezado.jpg" alt="" /></span>
+							<h3>Raspberry Pi 4</h3>
+							<p>Para este proyecto hemos usado una <a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/">Raspberry Pi 4 Modelo B</a> que dispone de 8GB de memoria RAM, esta será la Raspberry administradora del resto de Raspberrys que estarán en nuestro servidor. 	</p>
+							<span class="image main"><img src="images/raspberry/pic01.jpg" alt="" /></span>
+							<p>Esta Raspberry Pi 4 la montaremos en una carcasa modelada en 3D por nosotros diseñada para poder ser montada en racks junto a servidores más complejos, este diseño se ha realizado en Blender y se ha impreso en 3D en una Ender 3 Pro V2. Las configuraciones de impresión son las siguientes</p>
+							<ul> <b>Detalles de impresión</b>
+								<li><b>Cabezal: </b>4mm</li>
+								<li><b>Calidad: </b>Ultra</li>
+								<li><b>Material: </b>PLA+</li>
+								<li><b>Detalles: </b>Modelo "sliced" en Ultimaker Cura.</li>
+								<span class="image main"><img src="images/raspberry/pic02.jpg" alt="" /></span>
+							</ul>
+							<p style="text-align: center; font-style: italic;" class="copyright">El modelo 3D final puede variar con el resultado final.</p>
+							<p>Dentro de la Raspberry Pi 4 montaremos un Ubuntu Live Server, para no complicar demasiado los entornos de instalación de SO ni complicaciones con el resto de API y conexiones con el resto de placas y servidores.</p>
+							<p>Como se ha mencionado con anterioridad, la Raspberry estará montada en el rack conectada 24/7 tanto al servidor principal como al resto de placas. Por lo que necesitamos una alta eficiencia térmica, ya que soportará el <a href="#botelegram">bot de Telegram</a> y otros servicios por lo que en cierta medida la carga del procesador puede llegar a generar altas temperaturas y poder llegar a apagar el sistema o en la peor situación estropear el procesador por lo que hemos aplicado pads térmicos y disipadores pasivos, más el ventilador que está montado en la carcasa.</p>
+							<span class="image main"><img src="images/raspberry/pic03.jpg" alt=""/></span>
+						
+						</br>
+						</br>
+						
+							<h3>Raspberry Pi Zero</h3>
+							<p>Para las Raspberry Pi Zero tenemos un proyecto menos ambicioso, pero también interesante, hemos pensado en introducir un sensor de temperatura DHT11 para que pueda monitorear la temperatura y humedad del ambiente del rack o sala donde estén todos los sistemas, de esta manera podremos tener un registro del ambiente.</p>
+							<span class="image main"><img src="images/raspberry/pic04.jpg" alt=""/></span>
+							<p>Al no disponer de mucha potencia ni capacidad de procesamiento de datos, funcionamiento por WiFi entre otras limitaciones, a esta placa le pondremos un Ubuntu server base únicamente con samba y Python, de esta manera podremos mantener un registro de la temperatura del rack para obtenerlo todo controlado de esta manera podremos pasar archivos de temperatura por samba de manera individual y no restarle porcentaje de uso de procesador al resto de sistemas.</p>
+						
+							<h3>Cluster Final</h3>
+							<p>Finalmente instalaremos todo en la caja impresa mencionada anteriormente, dentro de esta se ubicarán la Raspberry Pi 4, Raspberry Pi Zero, Disipadores y 3 ventiladores de 24mm con la capacidad de mantener la temperatura de ambas en standby entorno unos 30°, si en ambas hacemos un benchmark para aumentar la temperaura y el estrés del procesador hemos apreciado que la Raspberry Pi 4 máximo llega a 41° mientras que la Pi Zero no llega a pasar de los 31°, esto es debido a la potencia y capacidad de computo de ambas placas.</p>
+							<table border="1">
+								<h3>Ventajas y desventajas</h3>
+								<thead>
+									<tr>
+										<th>Ventajas</th>
+										<th>Desventajas</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<ul>
+												<li>Todo centralizado</li>
+												<li>Ahorro de espacio</li>
+												<li>Eficiencia energética</li>
+												<li>Refrigeración excelente</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>Impresión muy tardada</li>
+												<li>Delicado y ligeramente pesado</li>
+												<li>Muy ruidoso</li>
+												<li>Necesita fuente de alimentación</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<span class="image main"><img src="images/raspberry/pic05.jpg" alt=""/></span>
+							
+						</article>
+
+						<!-- BOT Telegram -->
+						<article id="botelegram">
+							<h2 class="major">Bot Telegram</h2>
+							<span class="image main"><img src="images/botpython/encabezado.jpg" alt="" /></span>
+							<p>Este BOT está diseñado especificamente para poder obtener información, controlar y administrar el servidor de manera remota, el bot está creado usando Python3, a continuación mostraremos una pequeña demostración del código.</p>
+							<h3>Inicio y API</h3>
+							<p>Primeramente importamos la librería de telebot para poder conectarnos a la API de telegram mediante el token que se define más adelante, a continuación indicamos que de la carpeta comandos importemos los siguientes archivos los que contienen los comandos.</p>
+							<p>Finalmente definimos el token del bot que se nos haya especificado anteriormente en el botfather, este token lo definimos en una variable para poder usarlo repetidas veces más adelante sin necesidad de repetir el token completo a lo largo del código.</p>
+							<span class="image main"><img src="images/botpython/captura1.jpg" alt="" /></span>
+							<h3>Comandos y funciones</h3>
+							<p>El bot, como cualquier otro funciona por comandos, estos hemos decidido separarlos por archivos individuales para poder obtener una mucho mejor organización y mejor distribución de contenido. Los comandos tinen un funcionamiento simple pero complejo a su vez, por parte del archivo principal, el que mantiene "vivo" al bot, es decir main.py, llamará mediante funciones a los archivos que se han especificado en la tercera línea de código del archivo main.py</p>
+							<p>Como se ha mencionado anteriormente está el archivo principal "main.py" que llama a otros archivos individuales que contienen el código de los comandos, por ende es importante tener bien definidas las rutas de los comandos.</p>
+							<span class="image main"><img src="images/botpython/captura2.jpg" alt="" /></span>
+							<p>Ahora mostraremos un comando de ejemplo como puede ser el comando /ping, este comando como su nombre indica lo que realiza es mandar un paquete de consulta ICMP a la ip o dirección indicada, esto en este caso no tiene relevancia, sin embargo deberemos tener en cuenta que el código en el interior del comando será ejecutado por separado y el resultado devuelto al archivo principal por lo que siempre que se hagan comandos demasiado complejos puede que tengan resoluciones erroneas.</p>
+							<span class="image main"><img src="images/botpython/captura3.jpg" alt="" /></span>
+						</article>
+							
+						<!-- Readme -->
+						<article id="readme">
+							<h2 class="major">Bienvenido a M12</h2>
+							<p>Antes que nada agradecer a todos los tutores por su gran trabajo como docentes a lo largo de este gran año de segundo en SMX, apreciamos enormemente su esfuerzo por formar un futuro informático mejor.</p>
+							<p>En esta página web hay muchas etiquetas como que se visualizan  <a>de la siguiente manera</a> estas etiquetas han sido proporcionadas cautelosamente para acceder a contenido, fuentes y diversos articulos especialmente para obtener más información detallada sobre temas interesantes relacionados con el proyecto. Como se ha mencionado muchos articulos (como puede ser mismamente este) están ocultos en etiquetas como por ejemplo  <a href="#servidor">las especificaciones de nuestro sistema</a> por lo que agradeceriamos de antemano que se pueda tener el detalle de inspeccionar las diversas referencias adjuntas.</p>
+							<p>De igual manera agradecer a terceros como HTML5 UP, en proporcionar soporte como plantillas, X por proporcionar gran parte del sistema y a la siguiente lista de docentes que nos han acompañado a lo largo de este maravilloso grado.</p>
+							<b>SMX 2</b>
+							<ul>
+								<li><a href="#asilvia">Silvia Macho</a> (<b><i>Programación</i></b>)</li>
+								<li><a href="#acarlos">Carlos Nieto</a> (<b><i>Sistemas en Red</i></b>)</li>
+								<li><a href="#aalex">Alex Guerrero</a> (<b><i>Servicios de Red</i></b>)</li>
+								<li><a href="#aalex">Daniel Guerrero</a> (<b><i>Seguridad Informática</i></b>)</li>
+								<li><a href="#araquel">Raquel Ballester</a> (<b><i>Empresas y emprendimiento</i></b>)</li>
+							</ul>
+								<b>SMX 1</b>
+								<li>Noelia Cerro (<b><i>Redes Locales</i></b>)</li>
+								<li>Gustau Castells (<b><i>Hardware</i></b>)</li>
+								<li>Irene Brullet (<b><i>Seguridad laboral</i></b>)</li>
+								<li>Sandra Caceres (<b><i>Ofimática</i></b>)</li>
+								<li>Gemma Raimat (<b><i>Aplicaciones Web</i></b>)</li>
+							<div>
+								<p style="text-align: center; padding-top: 25px;"><-- La lista no tiene ningún orden de preferencia ❤  --></p>
+							</div>
+						</article>
+
+						<!-- About -->
+						<article id="about">
+							<h2 class="major">Sobre nosotros</h2>
+							<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+							<h3>Daniel Martinez Moreno</h3>
+							<p>Lorem Ipsum</p>
+							<h3>Mario Cuenca Medina</h3>
+							<p>Lorem Ipsum</p>
+						</article>
+
+						<!-- Correo Mario -->
+							<article id="correomario">
+								<h2 class="major">Mario Cuenca</h2>
+								<h3>Correo Personal</h3>
+								<b>mariocuenca200@gmail.com</b>
+								
+								<h3 style="margin-top: 20px;">Correo Instituto Sabadell</h3>
+								<b>mcuencam@ies-sabadell.cat</b>
+							</article>
+							
+						<!-- Correo Daniel -->
+						<article id="correodani">
+							<h2 class="major">Daniel Martínez</h2>
+							<h3>Correo Personal</h3>
+							<b>danieldanitere@gmail.com</b>
+							
+							<h3 style="margin-top: 20px;">Correo Instituto Sabadell</h3>
+							<b>dmartinezm@ies-sabadell.cat</b>
+						</article>
+							
+						<!-- Agradecimientos -->
+						<!-- Silvia -->
+						<article id="asilvia">
+							<h2 class="major">Gracias Silvia Macho</h2>
+							<span class="image main"><img src="images/gracias/Silvia.jpg" alt="" /></span>
+							<p>Muchas gracias por esforzarte en que aprendamos Python, muchas gracias por estar más que presente y no ser una simple tutora más, gracias por escuchar nuestros problemas y proporcionaros soluciones, y no hablo solo de programación. </p>
+						</article>
+
+						<!-- Carlos-->
+						<article id="acarlos">
+							<h2 class="major">Gracias Carlos Nieto</h2>
+							<span class="image main"><img src="images/gracias/Carlos.jpg" alt="" /></span>
+							<p>Muchas gracias por ser más que un profesor y convertir las clases en algo apetecible y mucho más alegre. Puede que tus examenes sean ligeramente complicados pero eso no quita que te apreciemos como el que más y seamos los hijos que nunca tendrás. ¡Eres el mejor entrenador de futbol que hemos tenido!</p>
+						</article>
+
+						<!-- Alex -->
+						<article id="aalex">
+							<h2 class="major">Gracias Alex Guerrero</h2>
+							<span class="image main"><img src="images/gracias/nofoto.png" alt="" /></span>
+							<p>Muchas gracias por preocuparte de que no acabemos en recuperaciones y apoyarnos todo lo posible tanto en tus correcciones como en las clases, resolviendo todo tipo de dudas de la manera más profesional posible.</p>
+						</article>
+
+						<!-- Daniel -->
+						<article id="adaniel">
+							<h2 class="major">Gracias Daniel Guerrero </h2>
+							<span class="image main"><img src="images/gracias/nofoto.png" alt="" /></span>
+							<p>Muchas gracias por añadirnos flexibilidad y permitirnos tener margenes entendiendo que todos aquí somos humanos, puede que tengamos nuestros más y nuestros menos a lo largo del curso pero siempre recordaremos gran parte de la asignatura!</p>
+						</article>
+
+						<!-- Raquel -->
+						<article id="araquel">
+							<h2 class="major">Gracias Raquel Ballester </h2>
+							<span class="image main"><img src="images/gracias/Raquel.jpg" alt="" /></span>
+							<p>Muchas gracias por enseñarnos la importancia de especificar los metodos de pago, la gloria de viajar, la importancia de la salud y sobretodo lo divertidas y educativas que son las clases contigo, agradecemos de todo corazón los largos lunes que se hacian más amenos con tu asignatura!</p>
+						</article>
+
+						<!-- Contacto -->
+							<article id="contacto">
+								<h2 class="major">Contacto</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Nombre</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Gmail</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Mensaje</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Enviar mensaje" class="primary" /></li>
+										<li><input type="reset" value="Borrar" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="https://twitter.com/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#correodani" class="icon brands fa-google"><span class="label">Gmail</span></a></li>
+									<li><a href="https://www.instagram.com/_.daniimartiinezz._/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/dmartinezm" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<p style="margin-top: 5px;">Daniel Martinez | ASIX</p>
+									<li><a href="https://twitter.com/Mariocuencaaa" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#correomario" class="icon brands fa-google"><span class="label">Gmail</span></a></li>
+									<li><a href="https://www.instagram.com/mario.cuencaaa/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/MarioCuenca22" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<p style="margin-top: 5px;">Mario Cuenca | DAM</p>
+								</ul>
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p style="text-align: center;" class="copyright">&copy; Proyecto Final: Daniel Martinez y Mario Cuenca.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://kit.fontawesome.com/4e8a095578.js" crossorigin="anonymous"></script>
+	</body>
+</html>
+
+<!-- Desde el programador de esta página quiero mandar un gran abrazo al Chuches -->
