@@ -1,0 +1,4 @@
+import = ['/home/admin/.config/alacritty/themes/one_dark.toml']
+
+[window]
+opacity = 0.8

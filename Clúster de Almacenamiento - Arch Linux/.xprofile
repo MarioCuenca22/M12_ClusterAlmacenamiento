@@ -1,0 +1,16 @@
+#Establecer distribución de teclado en español
+setxkbmap es &
+
+
+#Cambiar fondo de pantalla
+feh --bg-scale ~/.config/Wallpapers/wallpaper2.jpg &
+
+
+#Iniciar Picom
+picom &
+
+
+#Iniciar volumeicon
+volumeicon &
+
+export PATH=$HOME/.local/bin:$PATH
