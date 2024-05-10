@@ -1,6 +1,6 @@
 # Configuración de Arch Linux
 
-![Qtile](.config/Wallpapers/Screenshoot1.png)
+![Qtile](.config/Wallpapers/Screenshot1.png)
 
 Esta guía es una recopilación de todos los pasos necesarios para construir un entorno de escritorio a partir de una instalación limpia basada en Arch Linux. Podéis elegir el gestor de ventanas que queráis, pero aquí usaremos Qtile como primer "tiling window manager". Esta guía es básicamente una descripción de cómo hemos construido nuestro entorno de escritorio desde 0.
 
