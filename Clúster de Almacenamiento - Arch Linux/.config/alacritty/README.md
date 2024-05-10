@@ -1,6 +1,6 @@
 # Configuración de Alacritty
 
-![Alacritty](.config/Wallpapers/Screenshot2.png)
+![Alacritty](../Wallpapers/Screenshot2.png)
 
 En esta guía explicaremos como configurar [Alacritty](https://wiki.archlinux.org/title/Alacritty) y como está organizado su directorio y sus ficheros
 
