@@ -4,14 +4,14 @@ Esta guía es una recopilación de todos los pasos necesarios para construir un 
 
 Como hemos comentado, nos basaremos de una instalación limpia de Arch Linux. Dejamos la guía [aquí](https://docs.google.com/document/d/1T74VJPgouKC-BnTltKkQZuOcEpC_ARj_kXZPgsYHiCs/edit?usp=sharing) (Mirar solo el encabezado "**Instalación**") para que podáis instalar de 0 este SO
 
-## Pasos Previos
+# Pasos Previos
 Antes de pasar a la personalización del SO, necesitamos unos útiles básicos, e instalar **sudo** para obtener privilegios de superusuario:
 
 ```bash
 pacman -S sudo
 ```
 
-### Redes y Internet
+## Redes y Internet
 La [Wiki de Arch](https://wiki.archlinux.org/index.php/Installation_guide) no dice qué hacer después de establecer la contraseña del superusuario, por lo que nos aseguraríamos de tener internet con [NetworkManager](https://wiki.archlinux.org/title/NetworkManager), y lo habilitaremos para que se ejecuta el iniciar el sistema:
 
 ```bash
@@ -19,7 +19,7 @@ pacman -S networkmanager
 systemctl enable NetworkManager
 ```
 
-### Gestor de Arranque
+## Gestor de Arranque
 Ahora podéis instalar un gestor de arranque, en nuestro caso, [grub](https://wiki.archlinux.org/title/GRUB). Así es como se haría en hardware moderno, suponiendo que has montado la partición efi en [/boot](https://wiki.archlinux.org/index.php/Installation_guide#Example_layouts):
 
 ```bash
@@ -29,7 +29,7 @@ os-prober
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-### Usuario Personal
+## Usuario Personal
 Una vez tengáis lo anterior, podéis proceder con la creación del usuario personal. Lo crearemos, estableceremos la contraseña y lo añadiremos a los grupos necesarios:
 
 ```bash
@@ -54,7 +54,7 @@ umount -R /mnt
 reboot
 ```
 
-### Redes y Internet II
+## Redes y Internet II
 Después de haber iniciado sesión, el internet debería funcionar sin problema, pero eso solo aplica si el ordenador está conectado por cable. Si no tiene puertos Ethernet, tenemos [NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager), así que no hay problema.
 Para conectaros a una red inalámbrica con este software solo debéis hacer esto:
 
@@ -66,7 +66,7 @@ nmcli device wifi list
 nmcli device wifi connect TU_SSID password TU_CONTRASEÑA
 ```
 
-### Sistema de Ventanas
+## Sistema de Ventanas
 Lo último que tenemos que hacer antes de pensar en entornos de escritorio es instalar [Xorg](https://wiki.archlinux.org/index.php/Xorg), un sistema de ventanas:
 
 ```bash
@@ -74,7 +74,7 @@ sudo pacman -S xorg
 ```
 
 
-## Inicio de Sesión y Gestor de Ventanas
+# Inicio de Sesión y Gestor de Ventanas
 Primero, necesitamos una forma de iniciar sesión y abrir programas como navegadores y terminales, así que empezaremos instalando [lightdm](https://wiki.archlinux.org/index.php/LightDM) y [qtile](https://wiki.archlinux.org/index.php/Qtile). *lightdm* no funcionará si no instalamos también un [greeter](https://wiki.archlinux.org/index.php/LightDM#Greeter). También necesitamos [xterm](https://wiki.archlinux.org/index.php/Xterm) porque esa es la terminal que qtile abre por defecto, hasta que lo cambiemos en el archivo de configuración. Para editar archivos de configuración necesitaremos también un editor de texto, [vscode](https://wiki.archlinux.org/index.php/Visual_Studio_Code). Por último necesitamos un navegador.
 
 ```bash
@@ -95,7 +95,7 @@ setxkbmap es
 ```
 
 
-## Configuración por Defecto de Qtile
+# Configuración por Defecto de Qtile
 Ahora que estáis dentro de *qtile*, deberíais conocer algunos de los atajos de teclado que vienen por defecto.
 
 | **Atajo**            | **Acción**                          |
@@ -111,9 +111,9 @@ Ahora que estáis dentro de *qtile*, deberíais conocer algunos de los atajos de
 - **A partir de ahora, la configuración la aplicaremos sobre la estructura por defecto de archivos de qtile (~/.config/qtile). En nuestro caso hemos modificado la estructura por defecto, y hemos separado la configuración en varios archivos, haciendola más escalable. Podéis seguir la guía de este documento, y una vez acabada importar la carpeta [~/.config/qtile](https://github.com/MarioCuenca22/Sintesis-M12/tree/2564693f26f3bdd190c58e985953673b5ab5debd/Cl%C3%BAster%20de%20Almacenamiento%20-%20Arch%20Linux/.config/qtile) de este repositorio con nuestra estructura, y funcionará igual. La explicación más a fondo de la estructura la encontramos en el anterior enlace.**
 
 
-## Utilidades del Sistema
+# Utilidades del Sistema
 
-### Fuentes
+## Fuentes
 Las fuentes en Arch son básicamente un meme, antes de que os den problemas podéis simplemente instalar estos paquetes:
 
 ```bash
@@ -126,7 +126,7 @@ Para listar todas las fuentes disponibles, usaremos el siguiente comando:
 fc-list
 ```
 
-### AUR helper - *yay*
+## AUR helper - *yay*
 Instalad un **[AUR helper](https://wiki.archlinux.org/index.php/AUR_helpers)**, nosotros usamos [yay](https://github.com/Jguer/yay):
 
 ```bash
@@ -141,7 +141,7 @@ makepkg -si
 Con acceso al *Arch User Repository*, podéis instalar prácticamente
 todo el software de este planeta que haya sido pensado para correr en Linux.
 
-### Emulador de terminal - *alacritty*
+## Emulador de terminal - *alacritty*
 En este punto podéis instalar otro emulador de terminal. [Alacritty](https://wiki.archlinux.org/title/Alacritty) es muy comodo y personalizable:
 
 ```bash
@@ -162,7 +162,7 @@ terminal = "alacritty"
 
 - **Configuración y Explicación de Alacritty [aquí](https://github.com/MarioCuenca22/Sintesis-M12/tree/2564693f26f3bdd190c58e985953673b5ab5debd/Cl%C3%BAster%20de%20Almacenamiento%20-%20Arch%20Linux/.config/alacritty)** 
 
-### Menú - *rofi*
+## Menú - *rofi*
 Instalad un menú como [rofi](https://wiki.archlinux.org/index.php/Rofi) para poder abrir aplicaciones más comodamente sin depender de una terminal:
 
 ```bash
@@ -187,7 +187,7 @@ rofi-theme-selector
 
 - **Configuración y Explicación de Rofi [aquí](https://github.com/MarioCuenca22/Sintesis-M12/tree/2564693f26f3bdd190c58e985953673b5ab5debd/Cl%C3%BAster%20de%20Almacenamiento%20-%20Arch%20Linux/.config/rofi)**
 
-### Fondo de Pantalla - *feh*
+## Fondo de Pantalla - *feh*
 Lo primero es lo primero, vuestra pantalla se ve negra y vacía, así que probablemente queráis un fondo más bonito para no sentiros tan deprimidos. Podéis abrir *firefox* usando *rofi* y descargar un fondo de pantalla. Después instalad
 **[feh](https://wiki.archlinux.org/index.php/Feh)**
 y poned vuestro fondo:
@@ -199,7 +199,7 @@ feh --bg-scale ruta/al/fondo/de/pantalla
 
 En nuestro caso hemos creado el directorio [~/.config/Wallpapers](https://github.com/MarioCuenca22/Sintesis-M12/tree/2564693f26f3bdd190c58e985953673b5ab5debd/Cl%C3%BAster%20de%20Almacenamiento%20-%20Arch%20Linux/.config/Wallpapers) donde guardaremos los fondos de pantalla.
 
-### Audio - *pavucontrol*
+## Audio - *pavucontrol*
 En este punto, no hay audio, necesitamos
 **[pulseaudio](https://wiki.archlinux.org/index.php/PulseAudio)**.
 Recomandamos instalar un programa gráfico para manejar el audio como
@@ -246,7 +246,7 @@ Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
 
 Reiniciad Qtile con **Mod + Ctrl + R** y probad los atajos.
 
-### Brillo - *brightnessctl*
+## Brillo - *brightnessctl*
 Si estáis en un portátil, probablemente también necesitéis controlar el brillo de vuestra pantalla, para ello recomendamos
 **[brightnessctl](https://www.archlinux.org/packages/community/x86_64/brightnessctl/)**:
 
@@ -262,7 +262,7 @@ Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
 Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
 ```
 
-### Monitores - *xrandr* y *arandr*
+## Monitores - *xrandr* y *arandr*
 Si tenéis múltiples monitores, seguramente queráis usarlos todos. Así es como funciona **[xrandr](https://wiki.archlinux.org/index.php/Xrandr)**:
 
 ```bash
@@ -290,7 +290,7 @@ Dentro de esa barra podéis ver los widgets con los que viene por defecto:
 
 Añadid tantas pantallas como necesiteis y copia-pegad los widgets, más adelante podréis personalizarlos. Ahora podéis volver a *arandr*, darle click en "apply". Finalmente, reiniciad el gestor de ventanas.
 
-### Almacenamiento - *udiskie*
+## Almacenamiento - *udiskie*
 Otra utilidad básica que podríais necesitar es montar de forma automática unidades de almacenamiento externas. Para ello usamos
 **[udisks](https://wiki.archlinux.org/index.php/Udisks)**
 y **[udiskie](https://www.archlinux.org/packages/community/any/udiskie/)**. *udisks* es una dependencia de *udiskie*, así que solo instalaremos este último. Instalad también el paquete
@@ -301,7 +301,7 @@ para leer y escribir en discos NTFS:
 sudo pacman -S udiskie ntfs-3g
 ```
 
-### Redes - *nm-applet*
+## Redes - *nm-applet*
 Hemos configurado la red a través de *NetworkManager*, pero un programa gráfico es más cómodo. Nosotros usamos
 **[nm-applet](https://wiki.archlinux.org/index.php/NetworkManager#nm-applet)**:
 
@@ -309,7 +309,7 @@ Hemos configurado la red a través de *NetworkManager*, pero un programa gráfic
 sudo pacman -S network-manager-applet
 ```
 
-### Systrays - *udiskie*, *nm-applet*, *volumeicon* y *cbatticon*
+## Systrays - *udiskie*, *nm-applet*, *volumeicon* y *cbatticon*
 Por defecto, tenemos una "bandeja del sistema" en Qtile, pero no hay nada ejecutándose en ella. Podéis lanzar los programas que acabamos de instalar así:
 
 ```bash
@@ -327,7 +327,7 @@ cbatticon &
 
 Haciendolo de esta manera deberías de ejecutar esos comandos cada vez que inicies el sistema. En [.xprofile](#.xprofile) explicaremos la automatización de esto.
 
-### Notificaciones - *libnotify*
+## Notificaciones - *libnotify*
 Nos gusta tener notificaciones en el escritorio también, para ello tenéis que instalar [**libnotify**](https://wiki.archlinux.org/index.php/Desktop_notifications#Libnotify) y [**notification-daemon**](https://www.archlinux.org/packages/community/x86_64/notification-daemon/):
 
 ```bash
@@ -352,14 +352,14 @@ Probadlo:
 notification-send "Hola Mundo"
 ```
 
-### Explorador de Archivos - *thunar* y *ranger*
+## Explorador de Archivos - *thunar* y *ranger*
 Hasta ahora siempre hemos manejado los ficheros a través de la terminal, pero podéis instalar un explorador de archivos. Para uno gráfico, recomendamos **[thunar](https://wiki.archlinux.org/index.php/Thunar)**, y para uno basado en terminal, **[ranger](https://wiki.archlinux.org/index.php/Ranger)**.
 
 ```bash
 sudo pacman -S thunar ranger
 ```
 
-### Basura - *glib2* y *gvfs*
+## Basura - *glib2* y *gvfs*
 Si no queréis usar *rm* constantemente y arriesgaros a perder ficheros,
 necesitáis un sistema de basura. Por suerte, es bastante sencillo de hacer [usando alguna de estas herramientas](https://wiki.archlinux.org/index.php/Trash_management#Trash_creation)
 como **[glib2](https://www.archlinux.org/packages/core/x86_64/glib2/)**, y para interfaces gráficas como *thunar* necesitais **[gvfs](https://www.archlinux.org/packages/extra/x86_64/gvfs/)**:
@@ -380,7 +380,7 @@ Con *thunar* podéis abrir la basura desde el panel izquierdo, pero desde la lí
 ls ~/.local/share/Trash/files
 ```
 
-### Compositor de Imágen - *picom*
+## Compositor de Imágen - *picom*
 Finalmente, si queréis transparencia y demás (Tanto en GTK como en terminal) instala un compositor:
 
 ```bash
@@ -389,31 +389,31 @@ sudo pacman -S picom
 picom &
 ```
 
-### Multimedia
+## Multimedia
 Consultad [esta página](https://wiki.archlinux.org/index.php/List_of_applications/Multimedia) para ver la variedad de programas multimedia disponibles.
 
-#### Imágenes
+### Imágenes
 Para ver imágenes, tenemos [imv](https://archlinux.org/packages/extra/x86_64/imv/):
 
 ```bash
 sudo pacman -S imv
 ```
 
-#### Vídeo y audio
+### Vídeo y audio
 Aquí sin duda el clásico [vlc](https://wiki.archlinux.org/index.php/VLC_media_player_(Espa%C3%B1ol)) es lo que necesitamos:
 
 ```bash
 sudo pacman -S vlc
 ```
 
-### Actualizaciones
+## Actualizaciones
 Instalaremos un maquete que incluye mejoras para pacman, [pacman-contrib](https://archlinux.org/packages/extra/x86_64/pacman-contrib/)
 
 ```bash
 sudo pacman -S pacman-contrib
 ```
 
-### Otras Dependencias
+## Otras Dependencias
 En caso de que useis nuestra configuración, tenemos varios scripts personalizados para cambiar los temas de Qtile y Alacritty.
 
 Necesitaremos instalar las siguientes dependencias:
@@ -428,9 +428,9 @@ Estas dependencias son necesarias para los scripts que hemos creado para cambiar
 - [Explicación del Script para los Temas de Alacritty](https://github.com/MarioCuenca22/Sintesis-M12/blob/2564693f26f3bdd190c58e985953673b5ab5debd/Cl%C3%BAster%20de%20Almacenamiento%20-%20Arch%20Linux/.config/alacritty/README.md)
 
 
-## Temas
+# Temas
 
-### GTK
+## GTK
 Ahora, vamos a instalar un tema oscuro para GTK. Nosotros usamos *Material Black Colors*, podéis descargar una versión [aquí](https://www.gnome-look.org/p/1316887/), con sus respectivos iconos
 [aquí](https://www.pling.com/p/1333360/).
 
@@ -502,7 +502,7 @@ ls /usr/share/icons
 
 Recordad que solo veréis los cambios si iniciais sesión de nuevo.
 
-### lightdm
+## lightdm
 También podemos cambiar el tema de *lightdm* para que mole más, ¿por qué no? Necesitamos otro *greeter* y algún tema, en concreto
 **[lightdm-webkit2-greeter](https://www.archlinux.org/packages/community/x86_64/lightdm-webkit2-greeter/)** y **[lightdm-webkit-theme-aether](https://aur.archlinux.org/packages/lightdm-webkit-theme-aether/)**:
 
@@ -528,7 +528,7 @@ webkit_theme = lightdm-webkit-theme-aether
 ```
 
 
-## .bashrc
+# .bashrc
 Hemos modificado el archivo .bashrc para incluir dos comandos para ejecutar el Script python para cambiar los temas de Qtile y Alacritty. Esto lo conseguimos añadiendo un alias con el nombre del comando, y que será lo que ejecutará. 
 
 En nuestro caso, el comando para cambiar el tema de Qtile se llama **change-qtile-theme**, que ejecuta la ubicación de *python3* para abrir con python la ruta script. La línea quedaría así:
@@ -551,7 +551,7 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$ '
 
 Podéis importaros nuestro archivo [.bashrc](https://github.com/MarioCuenca22/Sintesis-M12/blob/2564693f26f3bdd190c58e985953673b5ab5debd/Cl%C3%BAster%20de%20Almacenamiento%20-%20Arch%20Linux/.bashrc)
 
-## .xprofile
+# .xprofile
 El archivo [.xprofile](https://wiki.archlinux.org/title/xprofile) nos permite ejecutar comandos al iniciar el sistema, por lo que nos puede venir bien para dejar programas en ejecución, como los Systrays, una vez arranque el sistema.
 
 Para ello necesitaremos descargar xorg:
@@ -573,9 +573,9 @@ export PATH=$HOME/.local/bin:$PATH
 Podéis remplazar vuestro archivo por nuestro [.xprofile](https://github.com/MarioCuenca22/Sintesis-M12/blob/2564693f26f3bdd190c58e985953673b5ab5debd/Cl%C3%BAster%20de%20Almacenamiento%20-%20Arch%20Linux/.xprofile)
 
 
-## Atajos de Teclado
+# Atajos de Teclado
 
-### Ventanas
+## Ventanas
 | **Atajo**                   | **Acción**                                       |
 | ----------------------- | -------------------------------------------- |
 | **Mod + J**             | Siguiente Ventana                            |
@@ -595,7 +595,7 @@ Podéis remplazar vuestro archivo por nuestro [.xprofile](https://github.com/Mar
 | **Mod + Ctrl + R**      | Reiniciar Gestor de Ventanas                  |
 | **Mod + Ctrl + Q**      | Cerrar Sesión                                |
 
-### Aplicaciones y Utilidades
+## Aplicaciones y Utilidades
 Los siguientes atajos de teclado funcionarán solo si instalas los programas que lanzan:
 
 ```bash
@@ -613,9 +613,9 @@ sudo pacman -S rofi thunar firefox alacritty redshift scrot
 | **Mod + Shift + R** | Parar Redshift                         |
 | **Mod + S**         | Lanzar Capturas de Pantalla (Scrot)            |
 
-## Software Instalado
+# Software Instalado
 
-### Utilidades Básicas y de Sistema
+## Utilidades Básicas y de Sistema
 | **Software**                                                                                            | **Utilidad**                                      |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------- |
 | **[networkmanager](https://wiki.archlinux.org/index.php/NetworkManager)**                           | Servicio de Redes                               |
@@ -638,7 +638,7 @@ sudo pacman -S rofi thunar firefox alacritty redshift scrot
 | **[xdotool](https://man.archlinux.org/man/xdotool.1.en)** | Simulador de Entradas de Teclado                            |
 | **[python-colorama](https://archlinux.org/packages/extra/any/python-colorama/)** |                             |
 
-### Fuentes y Temas
+## Fuentes y Temas
 | **Software**                                                                               | **Utilidad**                               |
 | -------------------------------------------------------------------------------------- | -------------------------------------- |
 | **[Picom](https://wiki.archlinux.org/index.php/Picom)**                                | Compositor para Xorg                   |
@@ -646,7 +646,7 @@ sudo pacman -S rofi thunar firefox alacritty redshift scrot
 | **[Material Black](https://www.gnome-look.org/p/1316887/)**                            | Tema e Iconos para GTK (Thunar)                |
 | **[feh](https://wiki.archlinux.org/index.php/Feh)**                                    | CLI para establecer fondos de pantalla |
 
-### Aplicaciones y Utilidades
+## Aplicaciones y Utilidades
 | **Software**                                                              | **Utilidad**                           |
 | --------------------------------------------------------------------- | ---------------------------------- |
 | **[alacritty](https://wiki.archlinux.org/index.php/Alacritty)**       | Emulador de Terminal               |
