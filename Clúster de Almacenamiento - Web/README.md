@@ -1,1 +1,1 @@
-# Configuración WEB
+# Configuración de la Web
