@@ -1,4 +1,4 @@
-# Configurar BOT de Telegram
+# Configuración del BOT de Telegram
 
 Una de las características más interesantes de nuestro servidor, es el [bot de Telegram](https://docs.google.com) al que se puede acceder mediante la propia APP o vía [WEB](espetoneta.es).
 
