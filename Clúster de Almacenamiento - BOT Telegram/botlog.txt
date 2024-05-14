@@ -1,4 +1,0 @@
-El usuario Mario ha reiniciado el servidor. 21-12-2023 09:42:24
-El usuario Mario ha reiniciado el servidor. 21-12-2023 09:56:54
-El usuario 1476114872 ha apagado el servidor. 21-12-2023 14:36:12
-El usuario 1476114872 ha intentado reiniciar el servidor sin permisos. 21-12-2023 14:36:18
