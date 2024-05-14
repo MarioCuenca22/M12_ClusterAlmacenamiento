@@ -421,7 +421,7 @@ En caso de que useis nuestra configuración, tenemos varios scripts personalizad
 Necesitaremos instalar las siguientes dependencias:
 
 ```bash
-sudo pacman -S python3 python3-pip xdotool python-colorama
+sudo pacman -S python3 python3-pip xdotool python-colorama python-psutil
 ```
 
 Estas dependencias son necesarias para los scripts que hemos creado para cambiar los temas de Qtile y Alacritty:
@@ -562,6 +562,13 @@ Para ello necesitaremos descargar xorg:
 sudo pacman -S xorg-xinit
 ```
 
+Antes de nada, para asegurarnos que **.xprofile** se ejecuta antes de cargar el sistema, debemos asegurarnos que en el archivo **~/.xinitrc**, o en **/etc/X11/xinit/xinitrc** si el primero no existe, están las siguientes líneas antes del comando **exec**:
+
+```bash
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
+```
+
 Una vez instalado, modificaremos el archivo **.xprofile** y añadiremos el siguiente contenido:
 
 ```bash
@@ -639,6 +646,7 @@ sudo pacman -S rofi thunar firefox alacritty redshift scrot
 | **[pcmanfm](https://wiki.archlinux.org/title/PCManFM)** |                             |
 | **[xdotool](https://man.archlinux.org/man/xdotool.1.en)** | Simulador de Entradas de Teclado                            |
 | **[python-colorama](https://archlinux.org/packages/extra/any/python-colorama/)** |                             |
+| **[python-psutil](https://archlinux.org/packages/extra/x86_64/python-psutil/)** |                             |
 
 ## Fuentes y Temas
 | **Software**                                                                               | **Utilidad**                               |
