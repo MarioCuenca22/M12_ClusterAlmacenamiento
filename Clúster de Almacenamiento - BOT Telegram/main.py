@@ -1,6 +1,6 @@
 # main.py
 import telebot
-from comandos import ping, sysinfo, discos, admin
+from commands import ping, sysinfo, discos, admin
 
 bot = telebot.TeleBot("X")
 

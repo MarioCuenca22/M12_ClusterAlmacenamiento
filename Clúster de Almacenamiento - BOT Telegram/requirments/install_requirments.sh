@@ -13,7 +13,7 @@ while IFS= read -r line; do
     package=$(echo "$line" | tr -d '\r\n')
     echo "Instalando $package..."
     pip install "$package"
-done < requisitos.txt
+done < requirments.txt
 
 deactivate
 echo "Instalación completada, eliminando residuos..."
