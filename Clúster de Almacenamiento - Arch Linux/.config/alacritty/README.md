@@ -20,7 +20,7 @@ Para que los cambios se apliquen, deberemos de haber instalado [picom](https://w
 
 
 ## Temas
-En el [directorio](https://github.com/MarioCuenca22/Sintesis-M12/tree/b9f46349dba16b764cce773e10d03897499fa5c4/Cl%C3%BAster%20de%20Almacenamiento%20-%20Arch%20Linux/.config/alacritty/themes) de temas tenemos bastantes temas diferentes que podemos cambiar, manualmente al archivo de configuración de alacritty, tal y como hemos comentado en el apartado anterior, o con el script que hemos creado y el comando personalizado **change-term-theme**, que explicaremos en el [siguiente](#script) apartado. 
+En el [directorio](https://github.com/MarioCuenca22/Sintesis-M12/tree/b9f46349dba16b764cce773e10d03897499fa5c4/Cl%C3%BAster%20de%20Almacenamiento%20-%20Arch%20Linux/.config/alacritty/themes) de temas tenemos bastantes temas diferentes que podemos cambiar, manualmente al archivo de configuración de alacritty, tal y como hemos comentado en el apartado anterior, o con el script que hemos creado y el comando personalizado **change-term-theme**, que explicaremos en el siguiente apartado. 
 
 Podemos descargar nuevos temas, siempre que los metamos en su directorio pertinente, desde este [repositorio](https://github.com/alacritty/alacritty-theme)
 
@@ -38,4 +38,10 @@ Además, para evitar tener que escribir **python3 /home/admin/.config/alacritty/
 
 ```bash
 alias change-term-theme="/usr/bin/python3 /home/admin/.config/alacritty/scripts/change_theme.py"
+```
+
+Ahora, simplemente nos bastará con reinciar, y una vez el sistema vuelva a estar encendido, probaremos lo siguente:
+
+```bash
+change-term-theme
 ```
