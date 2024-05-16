@@ -643,10 +643,11 @@ sudo pacman -S rofi thunar firefox alacritty redshift scrot
 | **[volumeicon](https://www.archlinux.org/packages/community/x86_64/volumeicon/)**                   | Bandeja del Sistema (Systray) para el Volumen                       |
 | **[glib2](https://www.archlinux.org/packages/core/x86_64/glib2/)**                                  | Basura                                        |
 | **[gvfs](https://www.archlinux.org/packages/extra/x86_64/gvfs/)**                                   | Basura para GUIs                              |
-| **[pcmanfm](https://wiki.archlinux.org/title/PCManFM)** |                             |
+| **[pcmanfm](https://wiki.archlinux.org/title/PCManFM)** | Gestión de Archivos                            |
 | **[xdotool](https://man.archlinux.org/man/xdotool.1.en)** | Simulador de Entradas de Teclado                            |
-| **[python-colorama](https://archlinux.org/packages/extra/any/python-colorama/)** |                             |
-| **[python-psutil](https://archlinux.org/packages/extra/x86_64/python-psutil/)** |                             |
+| **[python-colorama](https://archlinux.org/packages/extra/any/python-colorama/)** | Librería de colores para Python                            |
+| **[python-psutil](https://archlinux.org/packages/extra/x86_64/python-psutil/)** | Información de procesos de sistema en Python                            |
+| **[unzip](https://archlinux.org/packages/extra/x86_64/unzip/)** | Descompresor de Archivos                            |
 
 ## Fuentes y Temas
 | **Software**                                                                               | **Utilidad**                               |
