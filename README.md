@@ -61,4 +61,4 @@ Nuestro sistema incluye un chat de telegram con un BOT, que desde cualquier luga
 ### Página Web
 Finalmente, nuestra web pretende ser como este repositorio pero con todos los enlaces y documentación de nuestro proyecto. Este sí que pretende ser accesible a todo el mundo para que conozcan el desarrollo de un entorno como el nuestro, con toda la documentación lo más actualizada posible.
 
-- [Directorio]([https://github.com/MarioCuenca22/M12_ClusterAlmacenamiento/tree/main/Cl%C3%BAster%20de%20Almacenamiento%20-%20BOT%20Telegram]
+- [Directorio](https://github.com/MarioCuenca22/M12_ClusterAlmacenamiento/tree/main/Cl%C3%BAster%20de%20Almacenamiento%20-%20Web)
