@@ -1,4 +1,4 @@
-# ESPETONETA
+# Configuración de la Página Web
 
 **ESPETONETA** es un proyecto de Síntesis final diseñado para facilitar el acceso a todo el contenido de nuestro servidor a través de una página web. Este repositorio contiene los archivos principales del sitio web, incluyendo `index.html`, `main.js`, y `main.css`.
 
@@ -8,7 +8,7 @@
 - `main.css`
 
 ## Descripción de los archivos
-### `index.html`
+### index.html
 Este archivo HTML es la estructura principal de la página web **ESPETONETA**. A continuación, se describe su contenido y estructura principal:
 
 #### Encabezado (`<head>`):
@@ -23,7 +23,7 @@ Este archivo HTML es la estructura principal de la página web **ESPETONETA**. A
 - **Main**: Contiene diferentes artículos (`<article>`) que describen varias secciones del proyecto como Introducción, Contenido, y otros apartados específicos.
 - **Footer**: Sección para el pie de página (aunque no detallada en los fragmentos proporcionados).
 
-### `main.js`
+### main.js
 Este archivo JavaScript gestiona la interactividad y las animaciones de la página. Algunos puntos clave incluyen:
 
 #### Inicialización y Configuración:
@@ -44,7 +44,7 @@ Este archivo JavaScript gestiona la interactividad y las animaciones de la pági
 - Controla eventos de clic y teclas (como Escape) para mostrar u ocultar artículos.
 - Maneja el cambio de hash en la URL para mostrar el artículo correspondiente.
 
-### `main.css`
+### main.css
 Este archivo CSS define el estilo visual de la página. A continuación, se describen algunas de las clases y estilos importantes:
 
 #### Estilos Generales:
