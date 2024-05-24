@@ -22,6 +22,10 @@ Todo eso viene acompañado de su respectiva guía para saber como está montado 
 - GitHub - [Desarrollo Web](https://github.com/MarioCuenca22/M12_ClusterAlmacenamiento/tree/main/Cl%C3%BAster%20de%20Almacenamiento%20-%20Web)
 - GitHub - [Bot de Telegram](https://github.com/MarioCuenca22/M12_ClusterAlmacenamiento/tree/main/Cl%C3%BAster%20de%20Almacenamiento%20-%20BOT%20Telegram)
 
+### Aplicaciones Web
+
+- Google Drive - [Aplicaciones Web](https://docs.google.com/document/d/1UN6zlw-_PdumdafBB8S44ag3lJvutrr68eekFUfCOXM/edit?usp=sharing)
+
 ### Hardware
 
 - Google Drive - [Modelado y Montaje](https://docs.google.com/document/d/1Bdqa4Yyl63e_duI7_U5IAnCv65kMpL18vH2tymeMh64/edit?usp=sharing)
