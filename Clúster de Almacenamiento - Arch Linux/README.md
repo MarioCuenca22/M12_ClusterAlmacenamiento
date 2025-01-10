@@ -382,13 +382,13 @@ Con *thunar* podéis abrir la basura desde el panel izquierdo, pero desde la lí
 ls ~/.local/share/Trash/files
 ```
 
-## Compositor de Imágen - *picom*
+## Compositor de Imágen - *xcompmgr*
 Finalmente, si queréis transparencia y demás (Tanto en GTK como en terminal) instala un compositor:
 
 ```bash
-sudo pacman -S picom
+sudo pacman -S xcompmgr
 # Pon esto en ~/.xprofile
-picom &
+xcompmgr &
 ```
 
 ## Multimedia
