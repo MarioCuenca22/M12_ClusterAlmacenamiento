@@ -574,7 +574,7 @@ Una vez instalado, modificaremos el archivo **.xprofile** y añadiremos el sigui
 ```bash
 setxkbmap es &
 feh --bg-scale ~/.config/Wallpapers/wallpaper2.jpg &
-picom &
+xcompmgr &
 volumeicon &
 export PATH=$HOME/.local/bin:$PATH
 ```
