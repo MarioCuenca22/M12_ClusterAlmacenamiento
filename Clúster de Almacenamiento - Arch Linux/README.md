@@ -652,7 +652,7 @@ sudo pacman -S rofi thunar firefox alacritty redshift scrot
 ## Fuentes y Temas
 | **Software**                                                                               | **Utilidad**                               |
 | -------------------------------------------------------------------------------------- | -------------------------------------- |
-| **[Picom](https://wiki.archlinux.org/index.php/Picom)**                                | Compositor para Xorg                   |
+| **[Xcompmgr](https://wiki.archlinux.org/title/Xcompmgr)**                              | Compositor para Xorg                   |
 | **[UbuntuMono Nerd Font](https://aur.archlinux.org/packages/nerd-fonts-ubuntu-mono/)** | Fuente Nerd Font                 |
 | **[Material Black](https://www.gnome-look.org/p/1316887/)**                            | Tema e Iconos para GTK (Thunar)                |
 | **[feh](https://wiki.archlinux.org/index.php/Feh)**                                    | CLI para establecer fondos de pantalla |
