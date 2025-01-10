@@ -7,7 +7,13 @@ En esta guía explicaremos como configurar [Alacritty](https://wiki.archlinux.or
 ## Archivo de Configuración
 En el [archivo de configuración](https://github.com/MarioCuenca22/Sintesis-M12/blob/b9f46349dba16b764cce773e10d03897499fa5c4/Cl%C3%BAster%20de%20Almacenamiento%20-%20Arch%20Linux/.config/alacritty/alacritty.toml) tenemos infinidad de variables y personalizaciones. Podéis hechar un ojo a todas las posibilidades en la [página oficial](https://alacritty.org/config-alacritty.html) de alacritty.
 
-En nuestro caso, únicamente hemos configurado el tema, haciendolo con la variable import y la ruta del archivo *.toml*, y la opacidad de la terminal:
+Antes de nada, recalcar que con la instalación de alacritty, no se crea el archivo de configuración. Este debemos de crearlo nosotros. Alacritty buscará en dos ubicaciones del sistema este archivo específico, en **/etc/xdg/alacritty/alacritty.toml**, o en **~/.config/alacritty/alacritty.toml**. En nuestro caso, será la segunda ubicación. Crearemos el archivo con el siguiente comando:
+
+```bash
+touch ~/.config/alacritty/alacritty.toml
+```
+
+En nuestro caso, únicamente hemos configurado el tema, haciendolo con la variable general.import y la ruta del archivo *.toml* del tema, la opacidad de la terminal y el tamaño de la fuente:
 
 ```bash
 general.import = ['/home/admin/.config/alacritty/themes/one_dark.toml']
