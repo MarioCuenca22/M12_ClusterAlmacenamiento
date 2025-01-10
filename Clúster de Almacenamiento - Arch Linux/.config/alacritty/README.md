@@ -16,7 +16,7 @@ general.import = ['/home/admin/.config/alacritty/themes/one_dark.toml']
 opacity = 0.8
 
 [font]
-size 15.00
+size = 15.00
 ```
 
 Para que los cambios se apliquen, deberemos de haber instalado [picom](https://wiki.archlinux.org/title/picom), tal y como se ha explicado en la guía de [Configuración de Arch](https://github.com/MarioCuenca22/Sintesis-M12/blob/b9f46349dba16b764cce773e10d03897499fa5c4/Cl%C3%BAster%20de%20Almacenamiento%20-%20Arch%20Linux/README.md).
