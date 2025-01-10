@@ -6,8 +6,8 @@ setxkbmap es &
 feh --bg-scale ~/.config/Wallpapers/wallpaper2.jpg &
 
 
-#Iniciar Picom
-picom &
+#Iniciar xcompmgr
+xcompmgr &
 
 
 #Iniciar volumeicon
