@@ -4,9 +4,11 @@ import json
 import subprocess
 from colorama import Fore
 
+USER = os.getenv("USER") or os.getenv("USERNAME")
+
 def cargar_temas():
     temas = {}
-    carpeta_temas = "/home/admin/.config/qtile/themes"
+    carpeta_temas = f"/home/{USER}/.config/qtile/themes"
     id_tema = 1
 
     for nombre_archivo in os.listdir(carpeta_temas):
@@ -35,7 +37,7 @@ seleccion = input("\nSelecciona el tema deseado: ")
 
 if seleccion in temas:
     print(f"\nEl tema seleccionado es: {Fore.YELLOW}{temas[seleccion]['nombre']}{Fore.WHITE}")
-    ruta_config_qtile = os.path.expanduser("/home/admin/.config/qtile/config.json")
+    ruta_config_qtile = os.path.expanduser(f"/home/{USER}/.config/qtile/config.json")
     with open(ruta_config_qtile, 'w') as archivo:
         archivo.write('{"theme": "' + temas[seleccion]['nombre'] + '"}')
     time.sleep(3)
