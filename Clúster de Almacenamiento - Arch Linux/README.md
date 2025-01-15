@@ -364,6 +364,9 @@ Hasta ahora siempre hemos manejado los ficheros a través de la terminal, pero p
 sudo pacman -S thunar ranger
 ```
 
+> [!NOTE]  
+> En ranger, para mostrar archivos ocultos, escribimos :set show_hidden!
+
 ## Basura - *glib2* y *gvfs*
 Si no queréis usar *rm* constantemente y arriesgaros a perder ficheros,
 necesitáis un sistema de basura. Por suerte, es bastante sencillo de hacer [usando alguna de estas herramientas](https://wiki.archlinux.org/index.php/Trash_management#Trash_creation)
