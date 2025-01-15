@@ -6,6 +6,9 @@ Esta guía es una recopilación de todos los pasos necesarios para construir un 
 
 Como hemos comentado, nos basaremos de una instalación limpia de Arch Linux. Dejamos la guía [aquí](https://docs.google.com/document/d/1T74VJPgouKC-BnTltKkQZuOcEpC_ARj_kXZPgsYHiCs/edit?usp=sharing) (Mirar solo el encabezado "**Instalación**") para que podáis instalar de 0 este SO
 
+> [!NOTE]  
+> Para copiar la configuración, recomendamos copiar todo el contenido de este directorio (.config, .bashrc y .xprofile) en el usuario al que se quiere usar la configuración, y además, copiarlo a **/etc/skel** para cuando se creen futuros usuarios, adapten toda la configuración.
+
 # Pasos Previos
 Antes de pasar a la personalización del SO, necesitamos unos útiles básicos, e instalar **sudo** para obtener privilegios de superusuario:
 
