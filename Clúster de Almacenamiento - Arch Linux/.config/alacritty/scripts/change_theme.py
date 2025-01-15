@@ -3,9 +3,11 @@ import os
 import subprocess
 from colorama import Fore
 
+USER = os.getenv("USER) or os.getenv("USERNAME)
+
 def cargar_temas():
     temas = {}
-    carpeta_temas = "/home/admin/.config/alacritty/themes"
+    carpeta_temas = f"/home/{USER}/.config/alacritty/themes"
     id_tema = 1
 
     for nombre_archivo in os.listdir(carpeta_temas):
@@ -30,7 +32,7 @@ seleccion = input("\nSelecciona el tema deseado: ")
 
 if seleccion in temas:
     print(f"\nEl tema seleccionado es: {Fore.YELLOW}{temas[seleccion]['nombre']}{Fore.WHITE}")
-    ruta_config_alacritty = os.path.expanduser("/home/admin/.config/alacritty/alacritty.toml")
+    ruta_config_alacritty = os.path.expanduser(f"/home/{USER}/.config/alacritty/alacritty.toml")
     with open(ruta_config_alacritty, 'r+') as archivo:
         lineas = archivo.readlines()
         lineas[0] = f"import = ['{temas[seleccion]['ruta']}']\n"
